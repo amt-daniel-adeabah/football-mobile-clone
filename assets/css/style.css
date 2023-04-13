@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #F7E9DC;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Hide page on screen in this contrast */
+@media(min-width: 0px) and (max-width: 279px) {
+    body {
+        display: none;
+    }
+}
+
+/* Attribution */
+.attribution { 
+    font-size: 20px; 
+    text-align: center; 
+    margin-top: 30px;
+    font-weight: 900;
+}
+.attribution a { 
+    color: hsl(241, 93%, 39%); 
+    font-weight: 900;
+}
+
+/* Smallest screen */
+@media(min-width: 80px) and (max-width: 299px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* Normal smartphone screen */
+@media(min-width: 300px) and (max-width: 425px) {
+    .container {
+        width: 420px;
+    }
+}
+
+/* Tablet to larger screen */
+@media(min-width: 426px) and (max-width: 2560px) {
+    .container {
+        width: 420px;
+    }
+}
+
+.container {
+    height: 420px;
+    background: #ffffff;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+display: none;
+} /* If you want to hide or show scroll-bar*/
+
+
+/* icons auto sizes */
+i {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+
+img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* navigation sections */
+.topbar {
+    border-radius: 10px 10px 0 0;
+    background-color: #141313;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 40px;
+    padding: 10px;
+    width: 420px;
+}
+
+.topbar i{
+    color: #fff;
+    font-size: 15px;
+}
+
+.topbar .topbar-div-left, .topbar-div-right {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topbar .topbar-div-left h2 {
+    margin: 0 10px 0 10px;
+}
+
+.topbar .topbar-div-left .logo {
+    font-size: 23px;
+}
+
+.topbar .topbar-div-right i {
+    margin-left: 20px;
+}
+
+/* weekly section */
+.weekly {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #e9e6e6;
+    height: 40px;
+    padding: 5px 2px 0 5px;
+    overflow: auto;
+}
+
+.weekly::-webkit-scrollbar {
+    display: none;
+    } /* If you want to hide or show scroll-bar*/
+    
+
+.weekly .daytime {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.weekly .daytime h3 {
+    font-weight: 700;
+    font-size: 0.6rem;
+    color: #5f5b5b;
+}
+
+.weekly .daytime .active  {
+    font-weight: 900;
+    font-size: 0.6rem;
+    color: #ff0000;
+}
+
+.weekly .daytime .active-border  {
+    font-weight: 900;
+    font-size: 0.6rem;
+    border-bottom: 3px solid #ff0000;
+    padding-bottom: 5px;
+}
+
+/* all games section */
+.all-games {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 10px 20px;
+}
+
+.all-games h3 {
+    margin-right: 250px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.all-games h5 {
+    color: #5c5c5c;
+    font-weight: 600;
+    font-size: 0.7rem;
+}
+.all-games i {
+    color: #5c5c5c;
+    font-size: 20px;
+}
+
+.favorite {
+    background: #FFFFCC;
+    padding: 5px 0 5px 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    height: 25px;
+    color: #ada1a1;
+}
+
+.competitions {
+    background: #F5F3F3;
+    padding: 5px 0 5px 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    height: 25px;
+    color: #ada1a1;
+}
+
+/* games lists */
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #faf3f3;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.list:hover {
+    opacity: 0.5;
+}
+.list-li-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+}
+.list-li-text {
+    padding-left: 20px;
+}
+.list h3 {
+    padding-bottom: 5px;
+    font-size: 0.8rem;
+    color: rgb(155, 149, 149);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.list h5 {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.list-li-left {
+    text-align: left;
+}
+.list-li-right {
+    text-align: right;
+}
+.list-li-right h5 {
+    color: #ada1a1;
+    font-size: 0.8rem;
+}
+.list-li-right div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: white;
+    font-size: 12px;
+    width: 15px;
+    background: rgb(70, 96, 214);
+    border-radius: 50px;
+}
+
+img {
+    width: 35px;
+    height: 25px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+
+/* bottom nav */
+.bottom-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10px;
+    width: 420px;
+    padding: 25px 10px;
+    background: #ffffff;
+    opacity: 0.8;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.06);
+}
+
+.bottom-nav .icon-name h5 {
+    font-size: 0.9rem;
+    color: rgb(153, 151, 147);
+}
+
+.bottom-nav i {
+    width: 30px;
+    height: 20px;
+    border-radius: 50%;
+    color: #b6b0b0;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.bottom-nav .icon-name .active {
+    color: rgb(233, 28, 62);
+}
+
+.bottom-nav .icon-name img {
+    margin-left: 10px;
+}
+
+.bottom-nav .icon-name .one {
+    padding-left: 5px;
+}
+.bottom-nav .icon-name .two {
+    padding-right: 19px;
+}
+.bottom-nav .icon-name .two-text {
+    padding-left: 7px;
+}
+.bottom-nav .icon-name .three {
+    padding-left: 15px;
+}
+.bottom-nav .icon-name .four {
+    padding-right: 10px;
+}
+.bottom-nav .icon-name .four-text {
+    margin-left: 10px;
+}
+.bottom-nav .icon-name .five {
+    padding-right: 10px;
+}
